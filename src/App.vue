@@ -1,8 +1,8 @@
 <script setup>
-const nomeDaCantina = "Cantina da Escola";
+const nomeDaCantina = 'Cantina da Escola'
 </script>
 
 <template>
   <h1>🍔 {{ nomeDaCantina }}</h1>
-  <p>Nosso app de pedidos começa aqui!</p>
+  <p>Nosso app de pedidos começa aqui.</p>
 </template>
