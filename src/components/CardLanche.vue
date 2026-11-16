@@ -19,17 +19,23 @@ defineEmits(["adicionar"]);
           {{ lanche.nome }}
         </h3>
         <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
-            {{ lanche.descricao }}
+          {{ lanche.descricao }}
         </p>
       </div>
       <div class="mt-4 flex items-center justify-between">
         <span class="text-lg font-bold text-escola-600 dark:text-escola-400"
           >R${{ lanche.preco.toFixed(2).replace(".", ",") }}</span
         >
-        <button v-if="lanche.disponivel"  class="rounded-lg bg-escola-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-escola-700 active:scale-95">
+        <button @click="$emit('adicionar', lanche)"
+          v-if="lanche.disponivel"
+          class="rounded-lg bg-escola-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-escola-700 active:scale-95"
+        >
           Adicionar
         </button>
-        <span v-else class="rounded-lg bg-gray-400 px-4 py-2 text-sm font-semibold text-white">
+        <span
+          v-else
+          class="rounded-lg bg-gray-400 px-4 py-2 text-sm font-semibold text-white"
+        >
           Indisponível
         </span>
       </div>
