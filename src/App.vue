@@ -9,7 +9,7 @@ import CardLanche from './components/CardLanche.vue';
 <template>
   <div class="min-h-screen bg-gray-100 transition-colors dark:bg-gray-900">
     <!-- Barra de navegação -->
-    <NavBar :total-itens="totalItens"></NavBar>
+    <NavBar></NavBar>
 
     <main class="mx-auto max-w-6xl px-4 py-6">
       <RouterView />

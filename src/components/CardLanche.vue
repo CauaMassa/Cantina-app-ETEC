@@ -10,7 +10,7 @@ defineEmits(["adicionar"]);
   <div>
     <article
       class="flex flex-col rounded-2xl bg-white p-5 shadow-xs transition-shadow hover:shadow-lg dark:bg-gray-800">
-      <div class="flex-1">
+      <RouterLink :to="{ name: 'lanche-detalhe', params: { id: lanche.id } }" class="flex-1">
         <div class="mb-3 flex h-24 items-center justify-center text-6xl">
           {{ lanche.emoji }}
         </div>
@@ -20,7 +20,7 @@ defineEmits(["adicionar"]);
         <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
           {{ lanche.descricao }}
         </p>
-      </div>
+      </RouterLink>
       <div class="mt-4 flex items-center justify-between">
         <span class="text-lg font-bold text-escola-600 dark:text-escola-400">R${{ lanche.preco.toFixed(2).replace(".",
           ",") }}</span>
